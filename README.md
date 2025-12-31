@@ -4,7 +4,7 @@ A personal homelab project made as a hobby
 
 ## Folder Structure
 
-homelab/
+´´homelab/
 README.md
 CHANGELOG.md # optional but useful for “what changed”
 docs/
@@ -95,6 +95,6 @@ servarr.md
 .github/
 workflows/
 lint.yaml
-.gitignore
+.gitignore´´
 .editorconfig
 Makefile # or Taskfile.yml
