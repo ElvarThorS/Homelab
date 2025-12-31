@@ -4,7 +4,7 @@ Personal homelab repository for infrastructure configuration, application stacks
 
 This repo is organized to keep “desired configuration” (what should be deployed) in Git, while treating runtime state (databases, app metadata) as backups, not versioned files.
 
-## Folder structure (clickable)
+## Folder structure
 
 - [README.md](README.md) — repo overview and navigation
 - [CHANGELOG.md](CHANGELOG.md) — notable changes
@@ -22,7 +22,7 @@ This repo is organized to keep “desired configuration” (what should be deplo
   - [rebuild-servarr-vm.md](docs/runbooks/rebuild-servarr-vm.md)
   - [restore-jellyfin.md](docs/runbooks/restore-jellyfin.md)
   - [gpu-passthrough-notes.md](docs/runbooks/gpu-passthrough-notes.md)
-</details>
+  </details>
 
 <details>
 <summary><a href="inventory/">inventory/</a> — desired hosts, networks, DNS</summary>
@@ -34,7 +34,7 @@ This repo is organized to keep “desired configuration” (what should be deplo
 - [ipam/](inventory/ipam/)
   - [networks.yaml](inventory/ipam/networks.yaml)
   - [dns-records.yaml](inventory/ipam/dns-records.yaml)
-</details>
+  </details>
 
 <details>
 <summary><a href="platform/">platform/</a> — Proxmox and TrueNAS configuration references</summary>
@@ -59,7 +59,7 @@ This repo is organized to keep “desired configuration” (what should be deplo
   - [smb/](platform/truenas/smb/)
     - [shares.yaml](platform/truenas/smb/shares.yaml)
   - [notes.md](platform/truenas/notes.md)
-</details>
+  </details>
 
 <details>
 <summary><a href="apps/">apps/</a> — application stacks by runtime</summary>
@@ -81,10 +81,8 @@ This repo is organized to keep “desired configuration” (what should be deplo
     - [observability/compose.yaml](apps/docker/stacks/observability/compose.yaml)
     - [observability/env.example](apps/docker/stacks/observability/env.example)
 - [lxc-services/](apps/lxc-services/)
-  - [jellyfin/](apps/lxc-services/jellyfin/)
-    - [install.md](apps/lxc-services/jellyfin/install.md)
-    - [backups.md](apps/lxc-services/jellyfin/backups.md)
-</details>
+  - [jellyfin/](apps/lxc-services/jellyfin/) - [install.md](apps/lxc-services/jellyfin/install.md) - [backups.md](apps/lxc-services/jellyfin/backups.md)
+  </details>
 
 <details>
 <summary><a href="automation/">automation/</a> — infra-as-code and config management</summary>
@@ -102,7 +100,7 @@ This repo is organized to keep “desired configuration” (what should be deplo
     - [proxmox-node.yml](automation/ansible/playbooks/proxmox-node.yml)
 - [terraform/](automation/terraform/)
   - [cloudflare/](automation/terraform/cloudflare/)
-</details>
+  </details>
 
 <details>
 <summary><a href="secrets/">secrets/</a> — encryption docs and public recipients</summary>
@@ -110,7 +108,7 @@ This repo is organized to keep “desired configuration” (what should be deplo
 - [README.md](secrets/README.md)
 - [age/](secrets/age/)
   - [recipients.txt](secrets/age/recipients.txt)
-</details>
+  </details>
 
 <details>
 <summary><a href="scripts/">scripts/</a> — local helper scripts</summary>
@@ -125,14 +123,14 @@ This repo is organized to keep “desired configuration” (what should be deplo
 - [manifests/](backups/manifests/)
   - [jellyfin.md](backups/manifests/jellyfin.md)
   - [servarr.md](backups/manifests/servarr.md)
-</details>
+  </details>
 
 <details>
 <summary><a href=".github/">.github/</a> — CI workflows</summary>
 
 - [workflows/](.github/workflows/)
   - [lint.yaml](.github/workflows/lint.yaml)
-</details>
+  </details>
 
 ## Notes
 
