@@ -95,6 +95,6 @@ servarr.md
 .github/
 workflows/
 lint.yaml
-.gitignore´´
+.gitignore
 .editorconfig
-Makefile # or Taskfile.yml
+Makefile # or Taskfile.yml ´´
