@@ -7,129 +7,130 @@ This repo is organized to keep “desired configuration” (what should be deplo
 ## Folder structure
 
 - [README.md](README.md) — repo overview and navigation
-- [CHANGELOG.md](CHANGELOG.md) — notable changes
-- [.gitignore](.gitignore)
-- [.editorconfig](.editorconfig)
-- [Makefile](Makefile) — common tasks
+- [CHANGELOG.md](CHANGELOG.md) — notable changes #TODO
+- [.gitignore](.gitignore) Preview
+
+- [.editorconfig](.editorconfig) #TODO
+- [Makefile](Makefile) — common tasks #TODO
 
 <details>
 <summary><a href="docs/">docs/</a> — architecture, network, storage, runbooks</summary>
 
-- [architecture.md](docs/architecture.md)
-- [network.md](docs/network.md)
-- [storage.md](docs/storage.md)
-- [runbooks/](docs/runbooks/)
-  - [rebuild-servarr-vm.md](docs/runbooks/rebuild-servarr-vm.md)
-  - [restore-jellyfin.md](docs/runbooks/restore-jellyfin.md)
-  - [gpu-passthrough-notes.md](docs/runbooks/gpu-passthrough-notes.md)
+- [architecture.md](docs/architecture.md) #TODO
+- [network.md](docs/network.md) #TODO
+- [storage.md](docs/storage.md) #TODO
+- [runbooks/](docs/runbooks/) #TODO
+  - [rebuild-servarr-vm.md](docs/runbooks/rebuild-servarr-vm.md) #TODO
+  - [restore-jellyfin.md](docs/runbooks/restore-jellyfin.md) #TODO
+  - [gpu-passthrough-notes.md](docs/runbooks/gpu-passthrough-notes.md) #TODO
   </details>
 
 <details>
 <summary><a href="inventory/">inventory/</a> — desired hosts, networks, DNS</summary>
 
-- [sites/](inventory/sites/)
-  - [home/](inventory/sites/home/)
-    - [hosts.yaml](inventory/sites/home/hosts.yaml)
-    - [vars.yaml](inventory/sites/home/vars.yaml)
-- [ipam/](inventory/ipam/)
-  - [networks.yaml](inventory/ipam/networks.yaml)
-  - [dns-records.yaml](inventory/ipam/dns-records.yaml)
+- [sites/](inventory/sites/) #TODO
+  - [home/](inventory/sites/home/) #TODO
+    - [hosts.yaml](inventory/sites/home/hosts.yaml) #TODO
+    - [vars.yaml](inventory/sites/home/vars.yaml) #TODO
+- [ipam/](inventory/ipam/) #TODO
+  - [networks.yaml](inventory/ipam/networks.yaml) #TODO
+  - [dns-records.yaml](inventory/ipam/dns-records.yaml) #TODO
   </details>
 
 <details>
 <summary><a href="platform/">platform/</a> — Proxmox and TrueNAS configuration references</summary>
 
-- [proxmox/](platform/proxmox/)
-  - [nodes/](platform/proxmox/nodes/)
-    - [pve-guide/](platform/proxmox/nodes/pve-guide/)
-      - [post-install.md](platform/proxmox/nodes/pve-guide/post-install.md)
-      - [sysctl.conf](platform/proxmox/nodes/pve-guide/sysctl.conf)
-      - [modprobe.d/](platform/proxmox/nodes/pve-guide/modprobe.d/)
-      - [systemd/](platform/proxmox/nodes/pve-guide/systemd/)
-  - [lxc/](platform/proxmox/lxc/)
-    - [1013-jellyfin/](platform/proxmox/lxc/1013-jellyfin/)
-      - [config.conf](platform/proxmox/lxc/1013-jellyfin/config.conf)
-      - [mounts.md](platform/proxmox/lxc/1013-jellyfin/mounts.md)
-      - [gpu.md](platform/proxmox/lxc/1013-jellyfin/gpu.md)
-  - [scripts/](platform/proxmox/scripts/)
-    - [snapshot.sh](platform/proxmox/scripts/snapshot.sh)
-    - [vzdump-wrapper.sh](platform/proxmox/scripts/vzdump-wrapper.sh)
-- [truenas/](platform/truenas/)
-  - [datasets.yaml](platform/truenas/datasets.yaml)
-  - [smb/](platform/truenas/smb/)
-    - [shares.yaml](platform/truenas/smb/shares.yaml)
-  - [notes.md](platform/truenas/notes.md)
+- [proxmox/](platform/proxmox/) #TODO
+  - [nodes/](platform/proxmox/nodes/) #TODO
+    - [pve-guide/](platform/proxmox/nodes/pve-guide/) #TODO
+      - [post-install.md](platform/proxmox/nodes/pve-guide/post-install.md) #TODO
+      - [sysctl.conf](platform/proxmox/nodes/pve-guide/sysctl.conf) #TODO
+      - [modprobe.d/](platform/proxmox/nodes/pve-guide/modprobe.d/) #TODO
+      - [systemd/](platform/proxmox/nodes/pve-guide/systemd/) #TODO
+  - [lxc/](platform/proxmox/lxc/) #TODO
+    - [1013-jellyfin/](platform/proxmox/lxc/1013-jellyfin/) #TODO
+      - [config.conf](platform/proxmox/lxc/1013-jellyfin/config.conf)  #TODO
+      - [mounts.md](platform/proxmox/lxc/1013-jellyfin/mounts.md) #TODO
+      - [gpu.md](platform/proxmox/lxc/1013-jellyfin/gpu.md) #TODO
+  - [scripts/](platform/proxmox/scripts/) #TODO
+    - [snapshot.sh](platform/proxmox/scripts/snapshot.sh) #TODO
+    - [vzdump-wrapper.sh](platform/proxmox/scripts/vzdump-wrapper.sh) #TODO
+- [truenas/](platform/truenas/) #TODO
+  - [datasets.yaml](platform/truenas/datasets.yaml) #TODO
+  - [smb/](platform/truenas/smb/) #TODO
+    - [shares.yaml](platform/truenas/smb/shares.yaml) #TODO
+  - [notes.md](platform/truenas/notes.md) #TODO
   </details>
 
 <details>
 <summary><a href="apps/">apps/</a> — application stacks by runtime</summary>
 
-- [docker/](apps/docker/)
-  - [stacks/](apps/docker/stacks/)
-    - [servarr/](apps/docker/stacks/servarr/)
+- [docker/](apps/docker/) #TODO
+  - [stacks/](apps/docker/stacks/) #TODO
+    - [servarr/](apps/docker/stacks/servarr/) #TODO
       - [compose.yaml](apps/docker/stacks/servarr/compose.yaml)
-      - [compose.override.example.yaml](apps/docker/stacks/servarr/compose.override.example.yaml)
-      - [env.example](apps/docker/stacks/servarr/env.example)
-      - [secrets.sops.yaml](apps/docker/stacks/servarr/secrets.sops.yaml)
-      - [volumes.md](apps/docker/stacks/servarr/volumes.md)
-      - [notes.md](apps/docker/stacks/servarr/notes.md)
-      - [configs/](apps/docker/stacks/servarr/configs/)
-        - [prowlarr/](apps/docker/stacks/servarr/configs/prowlarr/)
-        - [gluetun/](apps/docker/stacks/servarr/configs/gluetun/)
-        - [traefik-or-nginx/](apps/docker/stacks/servarr/configs/traefik-or-nginx/)
-    - [jellyfin-aux/compose.yaml](apps/docker/stacks/jellyfin-aux/compose.yaml)
-    - [observability/compose.yaml](apps/docker/stacks/observability/compose.yaml)
-    - [observability/env.example](apps/docker/stacks/observability/env.example)
-- [lxc-services/](apps/lxc-services/)
-  - [jellyfin/](apps/lxc-services/jellyfin/) - [install.md](apps/lxc-services/jellyfin/install.md) - [backups.md](apps/lxc-services/jellyfin/backups.md)
+      - [compose.override.example.yaml](apps/docker/stacks/servarr/compose.override.example.yaml) #TODO
+      - [env.example](apps/docker/stacks/servarr/env.example) #TODO
+      - [secrets.sops.yaml](apps/docker/stacks/servarr/secrets.sops.yaml) #TODO
+      - [volumes.md](apps/docker/stacks/servarr/volumes.md) #TODO
+      - [notes.md](apps/docker/stacks/servarr/notes.md) #TODO
+      - [configs/](apps/docker/stacks/servarr/configs/) #TODO
+        - [prowlarr/](apps/docker/stacks/servarr/configs/prowlarr/) #TODO
+        - [gluetun/](apps/docker/stacks/servarr/configs/gluetun/) #TODO
+        - [traefik-or-nginx/](apps/docker/stacks/servarr/configs/traefik-or-nginx/) #TODO
+    - [jellyfin-aux/compose.yaml](apps/docker/stacks/jellyfin-aux/compose.yaml) #TODO
+    - [observability/compose.yaml](apps/docker/stacks/observability/compose.yaml) #TODO
+    - [observability/env.example](apps/docker/stacks/observability/env.example) #TODO
+- [lxc-services/](apps/lxc-services/) #TODO
+  - [jellyfin/](apps/lxc-services/jellyfin/) - [install.md](apps/lxc-services/jellyfin/install.md) - [backups.md] #TODO (apps/lxc-services/jellyfin/backups.md)
   </details>
 
 <details>
 <summary><a href="automation/">automation/</a> — infra-as-code and config management</summary>
 
-- [ansible/](automation/ansible/)
-  - [inventories/](automation/ansible/inventories/)
-    - [home/](automation/ansible/inventories/home/)
-      - [hosts.ini](automation/ansible/inventories/home/hosts.ini)
-      - [group_vars/](automation/ansible/inventories/home/group_vars/)
-      - [host_vars/](automation/ansible/inventories/home/host_vars/)
-  - [roles/](automation/ansible/roles/)
-  - [playbooks/](automation/ansible/playbooks/)
-    - [site.yml](automation/ansible/playbooks/site.yml)
-    - [docker-host.yml](automation/ansible/playbooks/docker-host.yml)
-    - [proxmox-node.yml](automation/ansible/playbooks/proxmox-node.yml)
-- [terraform/](automation/terraform/)
-  - [cloudflare/](automation/terraform/cloudflare/)
+- [ansible/](automation/ansible/) #TODO
+  - [inventories/](automation/ansible/inventories/) #TODO
+    - [home/](automation/ansible/inventories/home/) #TODO
+      - [hosts.ini](automation/ansible/inventories/home/hosts.ini) #TODO
+      - [group_vars/](automation/ansible/inventories/home/group_vars/) #TODO
+      - [host_vars/](automation/ansible/inventories/home/host_vars/) #TODO
+  - [roles/](automation/ansible/roles/) #TODO
+  - [playbooks/](automation/ansible/playbooks/) #TODO
+    - [site.yml](automation/ansible/playbooks/site.yml) #TODO
+    - [docker-host.yml](automation/ansible/playbooks/docker-host.yml) #TODO
+    - [proxmox-node.yml](automation/ansible/playbooks/proxmox-node.yml) #TODO
+- [terraform/](automation/terraform/) #TODO
+  - [cloudflare/](automation/terraform/cloudflare/) #TODO
   </details>
 
 <details>
 <summary><a href="secrets/">secrets/</a> — encryption docs and public recipients</summary>
 
-- [README.md](secrets/README.md)
-- [age/](secrets/age/)
-  - [recipients.txt](secrets/age/recipients.txt)
+- [README.md](secrets/README.md) #TODO
+- [age/](secrets/age/) #TODO
+  - [recipients.txt](secrets/age/recipients.txt) #TODO
   </details>
 
 <details>
 <summary><a href="scripts/">scripts/</a> — local helper scripts</summary>
 
-- [apply.sh](scripts/apply.sh)
-- [export-cloudflare.sh](scripts/export-cloudflare.sh)
+- [apply.sh](scripts/apply.sh) #TODO
+- [export-cloudflare.sh](scripts/export-cloudflare.sh) #TODO
 </details>
 
 <details>
-<summary><a href="backups/">backups/</a> — backup manifests and retention</summary>
+<summary><a href="backups/">backups/</a> — backup manifests and retention</summary> 
 
-- [manifests/](backups/manifests/)
-  - [jellyfin.md](backups/manifests/jellyfin.md)
-  - [servarr.md](backups/manifests/servarr.md)
+- [manifests/](backups/manifests/) #TODO
+  - [jellyfin.md](backups/manifests/jellyfin.md) #TODO
+  - [servarr.md](backups/manifests/servarr.md) #TODO
   </details>
 
 <details>
 <summary><a href=".github/">.github/</a> — CI workflows</summary>
 
-- [workflows/](.github/workflows/)
-  - [lint.yaml](.github/workflows/lint.yaml)
+- [workflows/](.github/workflows/) #TODO
+  - [lint.yaml](.github/workflows/lint.yaml) #TODO
   </details>
 
 ## Notes
