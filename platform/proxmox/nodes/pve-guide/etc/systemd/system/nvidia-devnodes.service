@@ -1,0 +1,30 @@
+[Unit]
+Description=Ensure NVIDIA /dev nodes exist before starting guests
+After=systemd-modules-load.service systemd-udevd.service
+Before=pve-guests.service
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/modprobe nvidia
+ExecStart=/sbin/modprobe nvidia_uvm
+ExecStart=/sbin/modprobe nvidia_modeset
+ExecStart=/sbin/modprobe nvidia_drm
+
+# Best-effort: ask NVIDIA tooling to create nodes
+ExecStart=/usr/bin/nvidia-modprobe -u -c 0
+ExecStart=/usr/bin/nvidia-modprobe -u -c 0 -m
+
+# Hard guarantees: create missing nodes if tooling/udev doesn't
+ExecStart=/bin/sh -c 'test -e /dev/nvidiactl || mknod -m 666 /dev/nvidiactl c 195 255'
+ExecStart=/bin/sh -c 'test -e /dev/nvidia0   || mknod -m 666 /dev/nvidia0   c 195 0'
+ExecStart=/bin/sh -c 'test -e /dev/nvidia-modeset || mknod -m 666 /dev/nvidia-modeset c 195 254'
+ExecStart=/bin/sh -c 'test -e /dev/nvidia-uvm || mknod -m 666 /dev/nvidia-uvm c 235 0'
+ExecStart=/bin/sh -c 'test -e /dev/nvidia-uvm-tools || mknod -m 666 /dev/nvidia-uvm-tools c 235 1'
+ExecStart=/bin/sh -c 'mkdir -p /dev/nvidia-caps'
+ExecStart=/bin/sh -c 'test -e /dev/nvidia-caps/nvidia-cap1 || mknod -m 666 /dev/nvidia-caps/nvidia-cap1 c 238 1'
+ExecStart=/bin/sh -c 'test -e /dev/nvidia-caps/nvidia-cap2 || mknod -m 666 /dev/nvidia-caps/nvidia-cap2 c 238 2'
+
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
